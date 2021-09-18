@@ -20,6 +20,7 @@ import java.net.URL;
  * @author Kiya.Zadeh22
  *
  */
+@SuppressWarnings("unused")
 public final class Saving {
 	public static PrintWriter writer;
 	public static BufferedReader reader;
@@ -37,10 +38,7 @@ public final class Saving {
 	 * @throws IOException 
 	 */
 	public static void initializeReader() throws URISyntaxException, IOException, NullPointerException {
-		
-		
 		reader = new BufferedReader(new FileReader(new File("Platformer Save data.txt")));
-		
 	}
 	public static void writeToFIle(String s) {
 		writer.print(s); 
@@ -106,7 +104,10 @@ public final class Saving {
 			while ((bytesRead = in.read(buffer)) != -1) {
 				out.write(buffer, 0, bytesRead);
 			}
+			
 		}
+		
+		
 		return f;
 	}
 	

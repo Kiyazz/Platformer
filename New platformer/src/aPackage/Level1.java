@@ -13,7 +13,7 @@ import java.awt.Rectangle;
  */
 @SuppressWarnings({ "serial", "unused" })
 public class Level1 extends Level {
-	NPC bob = new NPC("bob");
+	NPC bob = new NPC("bob", null);
 	protected Level1(int levelNumber) {
 		super(levelNumber);
 		// This area should be used to create all game objects assosiated with this level.
